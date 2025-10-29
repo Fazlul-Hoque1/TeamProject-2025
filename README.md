@@ -15,29 +15,25 @@ Frontend: Jorgaq Miholli [417790], builds user interface & handles user interact
 Backend: Zain Afzaal [419216], handles logic, routes, and API communication
 Database/Testing: Fazlul Hoque [419103], designs and manages data storage, queries and testing
 
-Schedule:
+Sprint 1: [ 01st November - 30th November ]
 
-Week 1:
-Plan the project and decide what features to include. The frontend member designs the basic layout, the backend sets up the server, and the database member starts creating the database structure.
+Frontend ( Jorgaq )
+Design the overall interface, including the homepage, create-event page, and event-details page.
+Choose the visual theme, color palette, and page structure.
+Set up the frontend framework.
+Build the main pages and implement basic navigation between them.
 
-Week 2:
-Finish the database setup and connect it to the backend. The frontend creates the main pages — homepage, create event, and event details.
+Backend ( Zain )
+Set up the backend environment
+Define the folder structure and install required dependencies.
+Create initial server routes and test API endpoints.
+Establish the connection between the backend and the database.
 
-Week 3:
-Work on the event creation feature. Users should be able to fill out a form and create new events that get saved in the database.
+Database/Testing ( Fazlul )
+Design the initial database schema (tables for events, comments, and users).
+Configure and connect the chosen database (MySQL or MongoDB).
+Insert sample data and verify data communication between backend and database.
 
-Week 4:
-Display all created events on the homepage. 
-
-Week 5: 
-Add the joining feature so users can join an event.
-
-Week 6:
-Add the commenting feature so users can comment on events. Make sure comments are stored and displayed properly.
-
-Week 7:
-Build the admin section so admins can view, edit, or delete events and comments. Then test everything, fix errors, and make sure all parts work together.
-
-Week 8:
-Do final improvements, check the whole system, and prepare for your project presentation or demo.
+Conclusion:
+By the end of Sprint 1, the foundation of the application will be complete. The frontend, backend, and database will be successfully connected, allowing users to create new events and view them on the homepage.
 
