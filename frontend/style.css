@@ -19,3 +19,42 @@ body {
     text-decoration: none; 
     border-radius: 10px; 
 }
+
+form {
+    background: orange;
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px; 
+}
+
+label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.create-event {
+  text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 10px;
+    border:none;
+}
+
+.create-btn {
+    width: 50%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin:auto
+}
