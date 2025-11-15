@@ -1,0 +1,30 @@
+package com.eventorganizer.event_org.service;
+
+
+import com.eventorganizer.event_org.model.Event;
+import com.eventorganizer.event_org.repository.EventRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class EventService {
+
+    @Autowired
+    public EventRepository repo;
+
+    public Event addevent(Event event){
+        return repo.save(event);
+    }
+
+    public List<Event> getAllEvents() {
+        return repo.findAll();
+    }
+
+    public Event getEventById(Long id) {
+        return repo.findById(id).orElse(null);
+    }
+
+    
+}
