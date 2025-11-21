@@ -30,13 +30,5 @@ public class EventController {
         return service.getEventById(id);
     }
 
-    @PutMapping("/update/{id}")
-    public Event updateEvent(@PathVariable Long id, @RequestBody Event event) {
-        return service.updateEvent(id, event);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public String deleteEvent(@PathVariable Long id) {
-        return service.deleteEvent(id);
-    }
+  
 }
