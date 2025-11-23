@@ -1,16 +1,32 @@
--- creating the database for users and events 
-create DATABASE userdb;
-create DATABASE eventdb;
+-- creating the databases
+CREATE DATABASE userdb;
+CREATE DATABASE eventdb;
+CREATE DATABASE testeventdb;
 
--- using use eventdb to access the main table
+-- main event table
 USE eventdb;
 
 -- adding necessary fields and attributes
+CREATE TABLE event ( 
+    event_id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(55),
+    date_e VARCHAR(55),
+    location VARCHAR(55),
+    description_n VARCHAR(150),
+    PRIMARY KEY (event_id)
+);
+
+-- test event table
+USE testeventdb;
+
 CREATE TABLE event (
-	event_id INT NOT NULL AUTO_INCREMENT,
-    title varchar(55),
-    date_e  varchar(55),
-    location varchar(55),
-    description_n varchar(150)
-	primary key (event_id)
-    )
+    event_id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(55),
+    date_e VARCHAR(55),
+    location VARCHAR(55),
+    description_n VARCHAR(150),
+    PRIMARY KEY (event_id)
+);
+
+-- check contents of test table (should be empty)
+SELECT * FROM event;
