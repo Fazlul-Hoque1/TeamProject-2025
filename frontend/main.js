@@ -30,3 +30,32 @@ if (form) {
         }
     });
 }
+
+// GET ALL EVENTS (home page)
+
+const eventsList = document.getElementById("events-list");
+
+if (eventsList) {
+    async function loadEvents() {
+        const res = await fetch(`${API_BASE}/all`);
+        const events = await res.json();
+
+        eventsList.innerHTML = "";
+
+        events.forEach(event => {
+            const div = document.createElement("div");
+            div.classList.add("event-card");
+
+            div.innerHTML = `
+                <h3>${event.title}</h3>
+                <p><strong>Date:</strong> ${event.date}</p>
+                <p><strong>Location:</strong> ${event.location}</p>
+                <p>${event.description}</p>
+            `;
+
+            eventsList.appendChild(div);
+        });
+    }
+
+    loadEvents();
+}
