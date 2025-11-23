@@ -12,4 +12,5 @@ CREATE TABLE event (
     date_e  varchar(55),
     location varchar(55),
     description_n varchar(150)
+	primary key (event_id)
     )
