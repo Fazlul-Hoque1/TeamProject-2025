@@ -1,6 +1,6 @@
 body { 
     font-family: sans-serif;  
-    background: rgb(255, 244, 218); 
+    background: white; 
     margin: 0;
 } 
 
@@ -10,6 +10,7 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    border-bottom: 2px solid #ddd;
 } 
     
 .btn { 
@@ -57,4 +58,40 @@ input, textarea {
     font-size: 16px;
     display: block;
     margin:auto
+}
+
+/* Index page */
+
+.container {
+  text-align: center;
+  padding:8px 20px;          
+}
+
+.container h1 {
+  font-size: 70px;
+  font-family: Tahoma, sans-serif;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;          
+}
+
+.container p {
+  font-size: 30px;
+  color: orange;  
+  margin-top: 5px;        
+}
+
+
+.footer {
+  background: white;          
+  color: #333;              
+  padding: 10px 0;
+  text-align: center;
+  border-top: 2px solid #ddd;
+}
+
+.footer a {
+  color: orange;             
+  text-decoration: none;
+  font-weight: 500;
 }
