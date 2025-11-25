@@ -1,12 +1,12 @@
 body { 
     font-family: sans-serif;  
-    background: white; 
+    background: rgb(255, 244, 218); 
+    margin: 0;
 } 
 
 .navbar { 
-    background: orange; 
-    color: white; 
-    padding: 15px 25px; 
+    background: white; 
+    color: hsl(37, 100%, 86%);  
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
