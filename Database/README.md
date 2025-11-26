@@ -12,20 +12,36 @@ We decided to use MySQL as the database for the project. The configuration was c
 
 Here spring boot handles database connectivity through its application.properties configuration. Below is the configuration used to connect spring boot with the MySQL database (also used for the initial testing/configuration):<br>
 
-//points to the MySQL database
-**spring.datasource.url=jdbc:mysql://localhost:3306/eventdb**
+//points to the MySQL database <br> 
+__spring.datasource.url=jdbc:mysql://localhost:3306/eventdb__ 
 
-//username and password used for authentication
-**spring.datasource.username=root**
-**spring.datasource.password=adminn**
+//username and password used for authentication<br>
+__spring.datasource.username=root__<br>
+__spring.datasource.password=adminn__ 
 
-//registers the MySQL JDBC driver
-**spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver**
+//registers the MySQL JDBC driver<br>
+__spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver__ 
 
-//automatically updates database tables when Entity classes change, useful during development
-**spring.jpa.hibernate.ddl-auto=update**
+//automatically updates database tables when Entity classes change, useful during development<br>
+__spring.jpa.hibernate.ddl-auto=update__ 
 
 [This configuration connected Spring Boot to a locally installed MySQL database (eventdb). It was used to test the initial setup, entity mapping, and the creation of event related tables]
+
+-------------------------------------------------------------------------
+
+Railway database configuration (used for main project):
+
+//points to the Railway MySQL database<br>
+__spring.datasource.url=jdbc:mysql://mysql.railway.internal:3306/railway__
+
+//username and password used for authentication<br>
+__spring.datasource.username=root__<br>
+__spring.datasource.password=********************************__
+
+//ensures tables are automatically created and updated based on the entity classes<br>
+__spring.jpa.hibernate.ddl-auto=update__
+
+[This configuration allows the backend to connect to Railway’s MySQL instance, which serves as the primary database for the project. All event data is now stored remotely, making it accessible for the entire team and stable enough for deployment]
 
 -------------------------------------------------------------------------
 
