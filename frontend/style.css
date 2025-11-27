@@ -102,3 +102,20 @@ input, textarea {
     display: block;
     margin: 0 auto;
 }
+
+#events-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px; 
+    padding: 30px;
+}
+
+/* Individual event card */
+.event-card {
+    background-color: rgb(255, 196, 87);
+    border-radius: 20px;
+    padding: 15px;
+    width: calc(33.333% - 20px); /* three cards per row */
+    box-sizing: border-box;
+}
