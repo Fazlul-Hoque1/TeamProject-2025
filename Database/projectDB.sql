@@ -20,10 +20,10 @@ USE app_user;
 
 -- adding the necessary fields and attributes for the app_user db table
 CREATE TABLE users (
-    user_id INT,
-    username VARCHAR(50),
-    password VARCHAR(255),
-    email VARCHAR(100),
-    role VARCHAR(50),
+    user_id INT NOT NULL AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    role VARCHAR(50) NOT NULL,
     PRIMARY KEY (user_id),
 );
