@@ -35,6 +35,31 @@ public class EventController {
                 .orElseThrow(() -> new IllegalArgumentException("Event with ID " + id + " not found"));
     }
 
+    @PutMapping("/update/{id}")
+    public Event updateEvent(@PathVariable Long id, @RequestBody Event newEvent) {
+        Event existing = repo.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Event with ID " + id + " not found"));
+
+        existing.setTitle(newEvent.getTitle());
+        existing.setLocation(newEvent.getLocation());
+        existing.setDate(newEvent.getDate());
+        existing.setDescription(newEvent.getDescription());
+
+        return repo.save(existing);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteEvent(@PathVariable Long id) {
+        if (!repo.existsById(id)) {
+            throw new IllegalArgumentException("Event with ID " + id + " not found");
+        }
+
+        repo.deleteById(id);
+        return "Event deleted successfully.";
+    }
+
+    
+
   
 }
 

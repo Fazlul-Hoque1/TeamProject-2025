@@ -50,6 +50,34 @@ After we configuring the database locally, we developed the same setup through R
 -- A stable backend <-> database connection<br>
 -- Easier access for the team<br>
 
+-------------------------------------------------------------------------
+
+Testing: <br>
+As part of my testing, I used Postman to verify communication between the backend and the MySQL database. Postman allowed us to manually send HTTP requests to the Spring Boot API and confirm that the backend was correctly handling requests and interacting with the database. <br>
+
+Postman communicates with the backend by sending requests to the API endpoints exposed by the Spring Boot server. After running the backend locally, the server is available on "http://localhost:8080". Main HTTP Methods Used for Endpoints: GET, POST, PUT, PATCH, DELETE....
+
+What I tested using postman was I validated all basic CRUD operations for the Events :
+1) Tested the connection using "GET http://localhost:8080/events" which verified the backend could retrieve data from the database (confirmed that the endpoint responded without errors, proving that the backend <-> database link was working perfectly fine).
+
+2) Created a new event by sending the POST request to the localhost:8080 and adding the body
+
+"{<br>
+  "title": "Test Event",<br>
+  "date_e": "2025-02-01",<br>
+  "location": "Campus A",<br>
+  "description_n": "This is a sample event for testing."<br>
+}"<br>
+
+This successfully created a new event in the database, showing a new row in the eventdb table in MySQL meaning the connection between backend and database is working 100%.
+
+This manual API testing confirmed that the core functionality of the sprint is working pecfectly.
+
+-------------------------------------------------------------------------
+
+
+
+
 
 
 

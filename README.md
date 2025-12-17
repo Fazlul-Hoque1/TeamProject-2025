@@ -37,3 +37,32 @@ Insert sample data and verify data communication between backend and database.
 Conclusion:
 By the end of Sprint 1, the foundation of the application will be complete. The frontend, backend, and database will be successfully connected, allowing users to create new events and view them on the homepage.
 
+------------------------------------------------------------------------
+
+Sprint 2: [ 01st December – 31st December ]
+
+Frontend ( Jorgaq ):
+Add the “Join Event” feature to the event-details page.
+Update the UI to show when a user has joined an event.
+Implement the commenting section under events, including displaying comments and updating them dynamically.
+Create the admin panel interface, including pages for viewing, editing, and deleting events and comments.
+Finalize UI improvements, responsiveness, and fix any frontend-related bugs.
+
+Backend ( Zain ):
+Implement API routes for joining and leaving events, ensuring participation data updates correctly.
+Create routes for posting and retrieving comments, including basic validation and moderation rules.
+Add admin authentication and authorization logic.
+Build routes for admin actions such as editing and deleting event or comment data.
+Optimize API performance, handle edge cases, and ensure proper error handling.
+
+Database/Testing ( Fazlul ):
+Create the participants table or relationship for tracking event joins.
+Add the comments table linked to users and events, and ensure proper saving and ordering.
+Test all event join/leave operations to confirm correct database behavior.
+Perform full system tests of admin CRUD operations (create, read, update, delete).
+Conduct final integration and functional tests, identify bugs.
+
+Conclusion:
+By the end of Sprint 2, the core interactive features of the application will be complete. Users will be able to join events, comment on event discussions, and admins will have full control through the admin panel. The system will be fully tested, optimized, and visually polished.
+
+---------------------------------------------------------------------------------
