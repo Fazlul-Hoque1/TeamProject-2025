@@ -38,6 +38,7 @@ label {
 .create-event {
   text-align: center;
   color:#333;
+  margin-top: 0px;
 }
 
 input, textarea {
@@ -118,4 +119,17 @@ input, textarea {
     padding: 15px;
     width: calc(33.333% - 20px); /* three cards per row */
     box-sizing: border-box;
+}
+
+
+/* login and signup*/
+.auth-page {
+  background-image: url("Images/white1.jpg"); 
+  background-size: cover;      
+  background-position: center; 
+  min-height: 100vh;           
+}
+.logo-container {
+  text-align: center;  
+  margin-bottom: 30px;
 }
