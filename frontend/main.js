@@ -1,13 +1,25 @@
+const publicPages = ["login.html", "signup.html"];
+const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+if (!isLoggedIn && !publicPages.some(p => window.location.pathname.includes(p))) {
+  window.location.href = "login.html";
+}
+
 const API_BASE = "https://eventorganizerapp.up.railway.app/events";
 
-
 // CREATE EVENT (form page)
-
 const form = document.getElementById("event-form");
 
 if (form) {
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
+
+        const token = localStorage.getItem("token"); 
+
+        if (!token) {
+            alert("You must be logged in to create an event");
+            return;
+        }
 
         const eventData = {
             title: document.getElementById("title").value,
@@ -18,21 +30,27 @@ if (form) {
 
         const res = await fetch(`${API_BASE}/add`, {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { 
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}` 
+            },
             body: JSON.stringify(eventData)
         });
+
+        const text = await res.text();
+        console.log("Create event status:", res.status);
+        console.log("Create event response:", text);
 
         if (res.ok) {
             alert("Event created!");
             window.location.href = "index.html"; 
         } else {
-            alert("Error creating event");
+            alert(text || "Error creating event");
         }
     });
 }
 
 // GET ALL EVENTS (home page)
-
 const eventsList = document.getElementById("events-list");
 
 if (eventsList) {
