@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Event {
@@ -18,6 +19,9 @@ public class Event {
     private String date;
     private String location;
     private  String description;
+
+     @Column(name = "created_by")
+    private String createdBy;
 
     public String getTitle() {
         return title;
@@ -50,4 +54,13 @@ public class Event {
     public void setDescription(String description) {
         this.description = description;
     }
+
+     public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+    
 }
