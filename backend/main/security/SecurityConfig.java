@@ -52,7 +52,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.PATCH, "/events/update-partial/**").hasRole("ADMIN")
 
                 // Only ADMIN role can DELETE any events using this path - /events/delete/{id} -- ** -> same like {id} or any path
-                .requestMatchers(HttpMethod.DELETE, "/events/delete/**").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.DELETE, "/events/delete/**").hasAnyRole("USER", "ADMIN")
 
                 // Only Admin will handle user CRUD Operation...
 
