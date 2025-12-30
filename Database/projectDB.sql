@@ -3,18 +3,18 @@ CREATE DATABASE eventdb;
 CREATE DATABASE app_user;
 
 -- main event table
--- USE eventdb;
+USE eventdb;
 
 -- adding necessary fields and attributes
 CREATE TABLE event ( 
-    PRIMARY KEY (event_id),
     event_id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(55),
     date_e VARCHAR(55),
     location VARCHAR(55),
     description_n VARCHAR(150),
     createdBy INT NOT NULL,
-    joinedBy INT
+    joinedBy INT,
+    PRIMARY KEY (event_id)
 );
 
 -- user table
