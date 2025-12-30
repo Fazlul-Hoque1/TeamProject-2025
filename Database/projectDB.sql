@@ -30,3 +30,9 @@ CREATE TABLE users (
     PRIMARY KEY (user_id)
     UNIQUE (username),
 );
+
+USE eventdb;
+
+CREATE TABLE event_joinedby (
+
+);
