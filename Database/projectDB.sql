@@ -7,12 +7,14 @@ CREATE DATABASE app_user;
 
 -- adding necessary fields and attributes
 CREATE TABLE event ( 
+    PRIMARY KEY (event_id),
     event_id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(55),
     date_e VARCHAR(55),
     location VARCHAR(55),
     description_n VARCHAR(150),
-    PRIMARY KEY (event_id)
+    createdBy INT NOT NULL,
+    joinedBy INT
 );
 
 -- user table
