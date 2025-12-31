@@ -37,4 +37,5 @@ CREATE TABLE event_joinedby (
     event_id INT NOT NULL,
     participant_name VARCHAR(55) NOT NULL,
     PRIMARY KEY (id),
+    FOREIGN KEY (event_id) REFERENCES event(event_id)
 );
